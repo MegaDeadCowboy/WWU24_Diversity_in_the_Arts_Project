@@ -40,8 +40,9 @@ def run():
     )
     
     # Add background image - Using raw string for path
-    image_path = r"images\aaron douglas - from slavery to recognition.jfif"
+    image_path = Path("images") / "aaron douglas - from slavery to recognition.jfif"
     st.markdown(add_bg_from_local(image_path), unsafe_allow_html=True)
+
 
     # Page header
     st.title("About")

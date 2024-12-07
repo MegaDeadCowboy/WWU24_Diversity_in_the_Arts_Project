@@ -87,8 +87,9 @@ def add_bg_from_local(image_file):
 
 
 # Add background image
-image_path = r"images/aaron douglas - song of the tower.jfif"  # Update this path to match your image location
+image_path = Path("images") / "aaron douglas - from slavery to recognition.jfif"
 st.markdown(add_bg_from_local(image_path), unsafe_allow_html=True)
+
 
 st.title("Get in Touch")
 st.write("Questions, ideas, or just want to connect? Reach out through our socials or email—we’d love to hear from you! Check out our contact info and photos below. Looking forward to connecting!")

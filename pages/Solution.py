@@ -106,8 +106,9 @@ def main():
     )
 
     # Add background image
-    image_path = r"images\aaron douglas - song of the tower.jfif"
+    image_path = Path("images") / "aaron douglas - from slavery to recognition.jfif"
     st.markdown(add_bg_from_local(image_path), unsafe_allow_html=True)
+
 
     st.title("Museum Diversity Transparency Framework")
     st.markdown("""<p class="subheader">A Guide for Fine Art Museums</p>""", unsafe_allow_html=True)
