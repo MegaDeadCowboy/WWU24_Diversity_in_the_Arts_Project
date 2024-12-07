@@ -46,7 +46,7 @@ st.set_page_config(
 )
 
 # Add background image
-image_path = r"images\aaron douglas - from slavery to recognition.jfif"
+image_path = Path("images") / "aaron douglas - from slavery to recognition.jfif"
 st.markdown(add_bg_from_local(image_path), unsafe_allow_html=True)
 
 # Center the title
