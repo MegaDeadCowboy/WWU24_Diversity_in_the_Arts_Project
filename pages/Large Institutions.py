@@ -49,10 +49,15 @@ with st.expander("📚 Methodology", expanded=False):
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('data\combinedSmallandLargeFinal.csv')
+        # Use Path to create cross-platform compatible path
+        data_path = Path('data') / 'combinedSmallandLargeFinal.csv'
+        df = pd.read_csv(data_path)
         return df
     except FileNotFoundError:
-        st.error("Error: Could not find the dataset file. Please ensure 'merged_df.csv' exists in the 'datasets' folder.")
+        st.error("Error: Could not find the dataset file. Please check if 'combinedSmallandLargeFinal.csv' exists in the data directory.")
+        return None
+    except Exception as e:
+        st.error(f"Error loading data: {str(e)}")
         return None
 
 df = load_data()
